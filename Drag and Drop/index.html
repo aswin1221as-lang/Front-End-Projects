@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Simple Kanban Board</h2>
+
+        <div class="list-container">
+
+            <div class="todo-container drop-zone">
+                <h3>To Do</h3>
+                <ul class="todo-list droppable">
+                    <li class="list-item" draggable="true" id="item1">Task 1</li>
+                    <li class="list-item" draggable="true" id="item2">Task 2</li>
+                </ul>
+            </div>
+
+            <div class="inprogress-container drop-zone">
+                <h3>In Progress</h3>
+                <ul class="inprogress-list droppable">
+                    <li class="list-item" draggable="true" id="item3">Task 3</li>
+                    <li class="list-item" draggable="true" id="item4">Task 4</li>
+                </ul>
+            </div>
+
+            <div class="done-container drop-zone">
+                <h3>Done</h3>
+                <ul class="done-list droppable">
+                    <li class="list-item" draggable="true" id="item5">Task 5</li>
+                    <li class="list-item" draggable="true" id="item6">Task 6</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
