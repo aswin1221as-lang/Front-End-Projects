@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+
+.container{
+    box-shadow:0px 3px 4px rgba(0,0, 0, 0.2);
+    width: 33%;
+    border-radius: 10px;
+}
+
+.header-container{
+    background-color: #7754eb;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    height: 5em;
+    border-bottom:1px solid #dad9d9;
+    padding: 22px 20px 0px 22px;
+}  
+
+.title-icon{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 3px;
+}
+
+.title-icon h3{
+    color: white;
+    font-weight: 700;
+}
+
+.current-date{
+    margin-left: 3px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.check-icon{
+    color: #7754eb;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius:100%;
+    background:white;
+}
+
+.input-container{
+    display:flex;
+    padding: 16px;
+    width: 100%; 
+    background-color:rgb(249, 249, 249);
+    height: 4.5em;
+    border-bottom: 1px solid #dad9d9;
+}
+
+.input-container input{
+    padding: 10px;
+    border: 1px solid #dad9d9;
+    color:#333;
+    border-radius: 7px;
+    width: 85%;
+    margin-right: 10px;
+    letter-spacing: 0.02rem;
+}
+
+.input-container input:focus{
+    outline: none;
+}
+
+.addTaskButton{
+    width: 40px;
+    border-radius: 7px;
+    border: 1px solid #888;
+    font-size: 1.3em;
+    background : #7754eb;
+    color: #ebebeb;
+    cursor: pointer;
+}
+.addTaskButton:hover{
+    transform: translateY(-1px);
+}
+
+.addTaskButton:active{
+    transform: translateY(0px);
+}
+
+.taskbar-container{
+    background-color: white;
+    border-bottom: 1px solid  #dad9d9;
+    height: 3.2em;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.filter{
+    color: #888;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 4px;
+    font-weight: 400;
+}
+
+.filter.active{
+    color: #7754eb;
+    font-weight: 500;
+}
+
+.filter.active::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color:#7754eb;
+    border-radius: 3px;
+}
+
+.filter:hover{
+   color: #7754eb;
+}
+
+.filter:hover::after{
+    content:"";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color:#7754eb;
+    border-radius:3px;
+}
+
+.taskitem-container{
+    background-color:white;
+    min-height: 9em;
+    border-bottom: 1px solid #dad9d9;
+}
+
+.item-container{
+    overflow-y: auto;
+    max-height: 9em;
+}
+
+.taskitem-container ul{
+    list-style: none;
+}
+
+.list .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 3em;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item span{
+    font-size: 14px;
+}
+
+.deletebutton{
+    background-color: white;
+    padding: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.empty-hidden-container{
+    height: 9em;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.empty-hidden-container i{
+    font-size: 25px;
+    padding-bottom: 8px;
+    color: #999;
+}
+
+.empty-hidden-container p{
+    color: #999;
+}
+
+.item:active .deletebutton{
+    transform: translateY(-1px);
+}
+.item:hover .deletebutton{
+    opacity: 1;
+}
+
+.footer-container{
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 2.5rem;    
+}
+
+.footer-container p{
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+.footer-container span{
+    text-align: center;
+    color: #888;
+    font-weight: 500; 
+}
+
+.clearbutton{
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: #999;
+}
+
+input[type="checkbox"]:checked{
+    border:1px solid black;
+    accent-color: rgb(90, 247, 90);
+    cursor: pointer;
+}
+
+@media(max-width : 760px) {
+    .container{
+        width: 50%;
+    }
+}
