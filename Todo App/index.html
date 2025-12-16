@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-container">
+            <div class="title-icon">
+                <span class="check-icon">&#10004;</span>
+                <h3>My Tasks</h3>
+            </div>
+            <p class="current-date"></p>
+        </div>
+
+        <div class="input-container">
+            <input id="taskInput" type="text" placeholder="What do you need to do?">
+            <button class="addTaskButton" onclick="addTask()">+</button>
+        </div>
+
+        <div class="taskbar-container">
+            <span class="filter active">All</span>
+            <span class="filter">Active</span>
+            <span class="filter">Completed</span>
+        </div>
+
+        <div class="taskitem-container">
+            <ul  class="item-container">
+            </ul>
+
+            <div class="empty-hidden-container">
+                <i class="fas fa-clipboard-list"></i>
+                <p>No tasks here yet</p>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <p>
+                <span id="item-left-label">0 items left</span>
+                <button class="clearbutton" onclick="clearCompletedTask()">Clear completed</button>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
