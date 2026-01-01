@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(25,25,25);
+    color: #b3b3b3;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 10px;
+}
+
+.title{
+    font-size: 26px;
+    margin-bottom: 20px;
+    position: relative;
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.title::after{
+    content: '';
+    position: absolute;
+    background-color: blueviolet;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    width: 13%;
+    transform: translateX(-50%);
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 13px;
+    width: 480px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.cards{
+    background-color: rgb(40,40,40);
+    width: 100%;
+    height: 21rem;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.cards:hover{
+    transform: translateY(-5px);
+}
+
+.top-section{
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #a78bfa
+    );
+    height: 4.5rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.middle-section{
+    height: 8rem;
+    border-bottom: 1.9px solid rgb(56, 56, 56);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: "";
+    top:-15%;
+    left:0;
+    width: 100%;
+}
+
+.author img{
+    margin-bottom: 15px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.author h4{
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.author span{
+    font-size: 12px;
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bottom-section{
+    height: 8rem;
+    padding: 15px 15px 15px 15px;
+    font-size: 12px;
+    position: relative;
+}
+
+.bottom-section p{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 90%;
+    height:2rem;
+    position: absolute;
+    bottom: 4px;
+}
+
+.social-links a{
+    background-color: rgb(70, 70, 70);
+    color: rgb(219, 219, 219);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.social-links a:hover{
+    transform: translateY(-2px);
+}
+
+.social-links a:active{
+    transform: translateY(0);
+}
+
+.social-links i{
+    font-size: 13px;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40,40,40);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border-top: 5px solid #8b5cf6;
+}
+
+.footer h3{
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer:hover{
+    transform: translateY(-3px);
+}
+
+.footer p{
+    padding: 10px;
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+}
+
+.view-btn{
+    padding: 6px;
+    border-radius: 15px;
+    background: #876bdb;
+    border: none;
+    box-shadow:4px 4px 4px rgba(146, 119, 209, 0.2);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.view-btn:hover{
+    transform: translateY(-2px);
+}
+
+.view-btn:active{
+    transform: translateY(0px);
+}
+
+@media(max-width: 1024px){
+
+    .container{
+        width: 70%;
+    }
+
+    .subtitle{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+@media(max-width: 760px){
+
+    .container{
+        width: 75%;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .subtitle{
+        font-size: 12px;
+    }
+}
